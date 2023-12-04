@@ -49,4 +49,14 @@ userRouter.post("/login", async(req, res)=>{
     }
 })
 
+userRouter.get("/users", async(req, res)=>{
+    try{
+        let user=await User.find();
+        res.status(200).send(user)
+
+    }catch(err){
+        res.status(500).send("User Not Found.")
+    }
+})
+
 module.exports={userRouter}

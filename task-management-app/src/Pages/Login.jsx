@@ -45,7 +45,9 @@ function Signup() {
   const { email, password } = formData;
 
   return (
-    <div>
+    <div className={style.main}>
+      <br />
+      <br />
       <div className={style.signup}>
         <h1>Login</h1>
         <form>
