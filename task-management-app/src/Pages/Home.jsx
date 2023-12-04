@@ -14,6 +14,7 @@ function Home() {
           </Link>
         </div>
       </div>
+      
       <div className={style.container}>
         <h1>List of All Tasks</h1>
       </div>

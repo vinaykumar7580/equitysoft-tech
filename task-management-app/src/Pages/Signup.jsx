@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import style from "../Styles/signup&login.module.css";
 import { useState } from "react";
-import axios from "axios"
+import axios from "axios";
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -10,7 +10,7 @@ function Signup() {
     password: "",
   });
 
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,21 +20,21 @@ function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post(`http://localhost:8000/app/register`, formData)
-    .then((res)=>{
-     
-      if(res.data.msg==="success"){
-        alert("User Register Success")
-        navigate("/login")
-      }else{
-        alert("User Registration Failed.")
-      }
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
+    axios
+      .post(`http://localhost:8000/app/register`, formData)
+      .then((res) => {
+        if (res.data.msg === "success") {
+          alert("User Register Success.");
+          navigate("/login");
+        } else {
+          alert("User Registration Failed.");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("User Registration Failed.");
+      });
 
-   
     setFormData({
       name: "",
       email: "",

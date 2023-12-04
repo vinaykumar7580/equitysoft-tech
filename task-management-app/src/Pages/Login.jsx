@@ -1,4 +1,3 @@
-
 import { Link, useNavigate } from "react-router-dom";
 import style from "../Styles/signup&login.module.css";
 import { useState } from "react";
@@ -10,7 +9,7 @@ function Signup() {
     password: "",
   });
 
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,20 +19,22 @@ function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post(`http://localhost:8000/app/login`, formData)
-    .then((res)=>{
-      console.log(res.data.msg, res.data.token)
-      if(res.data.msg==="success"){
-        alert("User Login Success")
-        navigate("/")
-      }else{
-        alert("User Login Failed.")
-      }
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
-
+    axios
+      .post(`http://localhost:8000/app/login`, formData)
+      .then((res) => {
+        console.log(res.data.msg, res.data.token);
+        if (res.data.msg === "success") {
+          alert("User Login Success.");
+          localStorage.setItem("token", res.data.token);
+          navigate("/");
+        } else {
+          alert("User Login Failed.");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("User Login Failed.");
+      });
 
     console.log("form", formData);
     setFormData({
