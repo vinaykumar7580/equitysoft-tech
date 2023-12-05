@@ -18,7 +18,7 @@ function AddMember() {
 
   const handleUserData = () => {
     axios
-      .get(`http://localhost:8000/app/users`)
+      .get(`https://sore-gray-crayfish-kit.cyclic.app/app/users`)
       .then((res) => {
         setUserData(res.data);
         console.log(res.data);
@@ -44,7 +44,7 @@ function AddMember() {
 
     console.log("payload", payload)
 
-    fetch(`http://localhost:8000/member/add`, {
+    fetch(`https://sore-gray-crayfish-kit.cyclic.app/member/add`, {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {

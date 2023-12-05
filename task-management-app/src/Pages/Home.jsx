@@ -13,7 +13,7 @@ function Home() {
 
   const handleUserData = () => {
     axios
-      .get(`http://localhost:8000/app/users`)
+      .get(`https://sore-gray-crayfish-kit.cyclic.app/app/users`)
       .then((res) => {
         setUserData(res.data);
         console.log(res.data);
@@ -28,7 +28,7 @@ function Home() {
   },[])
 
   const handleData=()=>{
-    fetch(`http://localhost:8000/task/get`,{
+    fetch(`https://sore-gray-crayfish-kit.cyclic.app/task/get`,{
         method:"GET",
         headers:{
             "Content-Type":"application/json",

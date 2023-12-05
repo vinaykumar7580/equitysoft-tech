@@ -21,7 +21,7 @@ function CreateTask() {
 
   const handleUserData = () => {
     axios
-      .get(`http://localhost:8000/app/users`)
+      .get(`https://sore-gray-crayfish-kit.cyclic.app/app/users`)
       .then((res) => {
         setUserData(res.data);
         console.log(res.data);
@@ -60,7 +60,7 @@ function CreateTask() {
     e.preventDefault();
     console.log("taskData", taskData);
 
-    fetch(`http://localhost:8000/task/add`,{
+    fetch(`https://sore-gray-crayfish-kit.cyclic.app/task/add`,{
         method:"POST",
         body:JSON.stringify(taskData),
         headers:{
@@ -75,7 +75,7 @@ function CreateTask() {
     })
     .then((err)=>{
         console.log(err)
-        alert("Please Login First.")
+        // alert("Please Login First.")
     })
 
     setTaskData({

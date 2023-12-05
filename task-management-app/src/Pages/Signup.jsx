@@ -21,7 +21,7 @@ function Signup() {
     e.preventDefault();
 
     axios
-      .post(`http://localhost:8000/app/register`, formData)
+      .post(`https://sore-gray-crayfish-kit.cyclic.app/app/register`, formData)
       .then((res) => {
         if (res.data.msg === "success") {
           alert("User Register Success.");
