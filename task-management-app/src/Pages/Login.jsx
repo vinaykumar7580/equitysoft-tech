@@ -26,7 +26,7 @@ function Signup() {
         if (res.data.msg === "success") {
           alert("User Login Success.");
           localStorage.setItem("token", res.data.token);
-          navigate("/");
+          navigate("/home");
         } else {
           alert("User Login Failed.");
         }
@@ -80,7 +80,7 @@ function Signup() {
         <br />
         <p>
           if you have to signup:{" "}
-          <Link to="/signup">
+          <Link to="/">
             <span>SignUp</span>
           </Link>
         </p>

@@ -10,8 +10,32 @@
 
 }
 
-.container{
-    border:2px solid red;
+
+.tablebox{
+    width:75%;
+    margin:auto;
+    padding: 30px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
 }
+table{
+    width: 100%;
+}
+table>thead>tr>th{
+    background-color: blueviolet;
+    color:white;
+    padding:10px;
+    font-size: 18px;
+}
+
+table>tbody>tr>td{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+table>tbody>tr{
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
 
 

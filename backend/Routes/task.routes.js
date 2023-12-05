@@ -12,9 +12,9 @@ taskRouter.post("/add", async(req, res)=>{
         if(decoded){
             let task=new Task(payload);
             await task.save()
-            res.status(200).send("task added successfully.")
+            res.status(200).send({msg:"success"})
         }else{
-            res.status(500).send(" Please login first")
+            res.status(500).send({msg:" Please login first"})
         }
 
     }catch(err){

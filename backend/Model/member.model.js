@@ -6,12 +6,11 @@ const memberSchema = mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
-    tasks: [
-      {
+    tasks:{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Task",
       },
-    ],
+
     role: String,
   },
   {

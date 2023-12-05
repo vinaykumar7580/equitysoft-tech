@@ -96,7 +96,7 @@ function CreateTask() {
           <h1 style={{ textAlign: "center" }}>Task Manage App</h1>
         </div>
         <div>
-          <Link to="/">
+          <Link to="/home">
             <button>Home Page</button>
           </Link>
         </div>

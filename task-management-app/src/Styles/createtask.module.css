@@ -36,7 +36,11 @@
 select{
     padding: 7px 10px;
     width: 270px;
-    border: none;
-    outline: none;
+    /* border: none;
+    outline: none; */
     font-size: 16px;
+}
+
+.space{
+    height:330px;
 }
